@@ -8,19 +8,20 @@ $successPage = "index.html";
 //import form information
 $name = $_POST['name'];
 $email = $_POST['email'];
-$subject = $_POST['subject'];
+$tele = $_POST['tele'];
 $message = $_POST['message'];
 $horario = $_POST['horario'];
 $suscribir = $_POST['suscribir'];
 
+
 $name=stripslashes($name);
 $email=stripslashes($email);
-$subject=stripslashes($subject);
+$tele=stripslashes($tele);
 $horario=stripslashes($horario);
 $suscribir=stripslashes($suscribir);
 $message=stripslashes($message);
-$message= "Nombre: $name, \n\n Mensaje: $message, \n\n TEL: $subject, \n\n Horario: $horario, \n\n Suscribir?: $suscribir";
-
+$message= "Nombre: $name, \n\n Mensaje: $message, \n\n TEL: $tele, \n\n Horario: $horario, \n\n Suscribir?: $suscribir";
+$asunto="Persona interesada en tomar el curso El poder de ser tú mismo";
 /*
 Simple form validation
 check to see if an email and message were entered
@@ -42,7 +43,7 @@ print "No email address was entered.<br>Please include your email. <br>";
 else {
 
 //mail the form contents
-mail( "$recipient", "$subject", "$message", "From: $email" );
+mail( "$recipient","$asunto", "$message", "From: $email" );
 header("Location: $successPage");
 }
 

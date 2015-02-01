@@ -111,6 +111,17 @@ background-color:#2f3640;
 background-color:#2f3640;
 color:#01CFCA;
 }
+div#noticiasmedia{
+  display:inline-block;
+  width:360px;
+  margin:5px;
+  background-color:F5F5F5;
+}
+p#pmedia{
+  font-size:20px;
+  color:black;
+  padding-top:15px;
+}
 /* ========== MENU WILL DROP ON HOVER FOR LARGE SCREENS ========== */
 @media (min-width: 991px)
  {
@@ -160,6 +171,14 @@ visibility:visible;
 
   .logomuestra img{
     width: 100%;
+  }
+  div#letrachica{
+    font-size:42px;
+    
+  }
+  iframe.youtube{
+    width: 290px;
+    height: 163px;
   }
  
 }
@@ -262,4 +281,35 @@ visibility:visible;
   }
 }
 
+@media (max-width: 990px){
+iframe.youtube{
+    width: 700px;
+    height: 394px;
+  }
+}
+
+@media (max-width: 718px){
+iframe.youtube{
+    width: 500px;
+    height: 281px;
+  }
+}
+
+@media (max-width: 360px){
+iframe.youtube{
+    width: 290px;
+    height: 163px;
+  }
+div#noticiasmedia img{
+  width: 70%;
+}
+div#noticiasmedia{
+  margin-left: -30px;
+
+}
+
+p#pmedia2{
+  font-size: 10px;
+}
+}
 
